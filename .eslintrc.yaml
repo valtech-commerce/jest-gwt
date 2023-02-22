@@ -1,0 +1,28 @@
+root: true
+parser: espree
+parserOptions:
+  ecmaVersion: 2022
+  sourceType: module
+  ecmaFeatures:
+    globalReturn: false
+    impliedStrict: false
+    jsx: false
+
+env:
+  es6: true
+  node: true
+
+plugins:
+  - node
+
+extends:
+  - "eslint:recommended"
+  - "plugin:node/recommended"
+  - "prettier"
+  - "plugin:jest/recommended"
+  - "plugin:jest/style"
+
+rules:
+  jest/expect-expect: [off]
+  jest/no-export: [off]
+  node/no-unsupported-features/es-syntax: [off]

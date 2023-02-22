@@ -1,0 +1,60 @@
+{
+  "name": "@valtech-commerce/jest-gwt",
+  "version": "1.0.0",
+  "description": "Given-When-Then helper for Jest",
+  "definition": "",
+  "homepage": "https://github.com/valtech-commerce/jest-gwt",
+  "author": {
+    "name": "Valtech Canada inc.",
+    "url": "https://www.valtech.ca/"
+  },
+  "keywords": [
+    "exception",
+    "Given When Then",
+    "gwt",
+    "jest",
+    "package.json"
+  ],
+  "license": "MIT",
+  "repository": {
+    "url": "git://github.com/valtech-commerce/jest-gwt.git",
+    "type": "git"
+  },
+  "bugs": {
+    "url": "https://github.com/valtech-commerce/jest-gwt/issues"
+  },
+  "engines": {
+    "node": ">= 16"
+  },
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./exception": "./src/exception.gwt.js",
+    "./package": "./src/package.gwt.js"
+  },
+  "scripts": {
+    "test": "npm run lint && jest ./test/**",
+    "test:standards": "jest ./test/standards/**",
+    "lint": "npm run lint:eslint && npm run lint:prettier",
+    "lint:prettier": "prettier --check .",
+    "lint:eslint": "eslint --report-unused-disable-directives .",
+		"fix": "npm run fix:prettier && npm run fix:eslint",
+		"fix:prettier": "prettier --write .",
+		"fix:eslint": "eslint --fix --ext .js ."
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.0",
+    "@babel/preset-env": "^7.20.2",
+    "eslint": "^8.34.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-jest": "^27.2.1",
+    "eslint-plugin-node": "^11.1.0",
+    "prettier": "^2.8.4"
+  },
+  "dependencies": {
+    "@valtech-commerce/fs": "^1.7.0"
+  },
+  "peerDependencies": {
+    "jest": "^29.4.3"
+  }
+}

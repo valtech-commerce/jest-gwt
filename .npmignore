@@ -1,0 +1,15 @@
+.github
+.vscode
+.editorconfig
+.eslintrc.yaml
+.gitignore
+.prettierignore
+.prettierrc.yaml
+babel.config.js
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md
+SECURITY.md
+SUPPORT.md
+test
+!src/**
+.DS_Store
